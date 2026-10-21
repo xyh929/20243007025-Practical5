@@ -1,5 +1,9 @@
 # PracticalFive - Chinese Municipalities
 
+Student: Xiaoyoheng
+Student ID: 20243007025
+Public repository: https://github.com/xyh929/20243007025-Practical5
+
 Java application logic and XML Views. Open this folder in Android Studio, wait for Gradle sync, and run the app configuration on an Android device (API 24 or later).
 
 ## Usage
@@ -23,7 +27,14 @@ Enter Beijing, Shanghai, Tianjin or Chongqing, then press the keyboard Go/Enter 
 - Screenshots reviewed for Beijing and Chongqing; title, photo, information and fixed bottom button visible.
 - lintDebug could not complete: intellij-core-32.3.3.jar and kotlin-compiler-32.3.3.jar are missing from the local lint cache. Offline lint reports dependency resolution failure; online lint stalled during tool retrieval. APK compilation and simulator validation passed independently.
 
-## Submission still required
-Create a new PUBLIC GitHub/GitLab repository named STUDENT_ID-Practical5 without initializing remote files. Add its URL as origin and push this repository, preserving the existing incremental commits. No remote has been configured or pushed because the student ID and destination repository have not been supplied. The assignment asks for incremental pushes during development; these local commits preserve actual stages, but no remote pushes have occurred. Submit the public repository HTTPS URL on Canvas.
+## Submission and version control
+The public repository is named `20243007025-Practical5`. It was created blank, without a remote README, .gitignore or license. Actual local development commits were preserved and were pushed individually in their original order, without force-pushing or changing commit dates.
+
+Timing disclosure: the initial Android project and app features were developed locally before the remote repository was created. Therefore the original requirement to link the remote immediately and push during development was not met at that time. Later individual pushes preserve the real development history but do not retroactively satisfy that timing requirement. The project was prepared and pushed using Git CLI rather than Android Studio built-in Git controls.
+
+Submit this HTTPS URL in the designated Practical 5 submission on Canvas:
+https://github.com/xyh929/20243007025-Practical5
+
+Canvas submission must still be performed and confirmed by the student.
 
 Do not place this project in a directory containing Chinese characters: the installed Android Gradle plugin rejects such paths on Windows.
