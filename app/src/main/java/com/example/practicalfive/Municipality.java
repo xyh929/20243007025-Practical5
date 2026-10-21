@@ -1,6 +1,9 @@
 package com.example.practicalfive;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.ActivityNotFoundException;
+import android.net.Uri;
 import android.os.Bundle;
 import android.content.res.ColorStateList;
 import android.widget.Button;
@@ -45,6 +48,22 @@ public class Municipality extends Activity {
         Button visit = findViewById(R.id.visit_site);
         visit.setBackgroundTintList(ColorStateList.valueOf(colour));
         visit.setTextColor(foreground);
+        visit.setOnClickListener(view -> openOfficialSite());
         findViewById(R.id.back_button).setOnClickListener(view -> finish());
+    }
+    private void openOfficialSite() {
+        String url;
+        switch (selectedName) {
+            case "Beijing": url = "https://english.beijing.gov.cn/"; break;
+            case "Shanghai": url = "https://english.shanghai.gov.cn/"; break;
+            case "Tianjin": url = "https://en.tj.gov.cn/"; break;
+            case "Chongqing": url = "https://english.cq.gov.cn/"; break;
+            default: return;
+        }
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        } catch (ActivityNotFoundException | SecurityException exception) {
+            Toast.makeText(this, R.string.browser_error, Toast.LENGTH_LONG).show();
+        }
     }
 }
