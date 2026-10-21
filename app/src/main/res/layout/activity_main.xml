@@ -1,9 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:orientation="vertical"
-    android:gravity="center" android:background="@color/color_default_background">
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/welcome_message" android:textSize="24sp"
-        android:textColor="@color/color_text_dark" />
-</LinearLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+ android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent"
+ android:fillViewport="true" android:background="@color/color_default_background">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:orientation="vertical" android:padding="24dp">
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:text="@string/main_title" android:textSize="28sp" android:textStyle="bold"
+ android:textColor="@color/color_text_dark" android:layout_marginTop="16dp"/>
+ <ImageView android:layout_width="match_parent" android:layout_height="280dp"
+ android:layout_marginTop="20dp" android:src="@drawable/chinese_municipalities"
+ android:scaleType="fitCenter" android:contentDescription="@string/map_description"/>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:text="@string/input_label" android:textSize="18sp" android:textStyle="bold"
+ android:textColor="@color/color_text_dark" android:layout_marginTop="24dp" android:labelFor="@id/municipality_input"/>
+ <EditText android:id="@+id/municipality_input" android:layout_width="match_parent"
+ android:layout_height="wrap_content" android:minHeight="56dp" android:inputType="textCapWords"
+ android:singleLine="true" android:imeOptions="actionGo" android:hint="@string/input_hint"
+ android:textColor="@color/color_text_dark" android:autofillHints="addressLocality"/>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:text="@string/supported_names" android:textSize="14sp" android:layout_marginTop="12dp"
+ android:textColor="@color/color_text_dark"/>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:text="@string/input_help" android:textSize="14sp" android:layout_marginTop="8dp"
+ android:textColor="@color/color_text_dark"/>
+ </LinearLayout>
+</ScrollView>
