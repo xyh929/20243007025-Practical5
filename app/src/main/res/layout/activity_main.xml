@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    android:gravity="center" android:background="@color/color_default_background">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/welcome_message" android:textSize="24sp"
+        android:textColor="@color/color_text_dark" />
+</LinearLayout>
