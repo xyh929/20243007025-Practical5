@@ -1,5 +1,10 @@
 <resources>
-    <color name="color_default_background">#FFF9F5</color>
-    <color name="color_text_dark">#202124</color>
-    <color name="ic_launcher_background">#FFFFFF</color>
+<color name="municipality_beijing">#C62828</color>
+<color name="municipality_shanghai">#AD008B</color>
+<color name="municipality_tianjin">#36454F</color>
+<color name="municipality_chongqing">#F57C00</color>
+<color name="color_text_light">#FFFFFF</color>
+<color name="color_text_dark">#202124</color>
+<color name="color_default_background">#FFFAF5</color>
+<color name="launcher_background">#000000</color>
 </resources>
