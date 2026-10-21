@@ -2,26 +2,36 @@ package com.example.practicalfive;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.WindowInsets;
+import android.content.Intent;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public static final String EXTRA_MUNICIPALITY = "com.example.practicalfive.MUNICIPALITY";
+    private final TextProcessor processor = new TextProcessor();
+    @Override protected void onCreate(Bundle state) {
+        super.onCreate(state);
         setContentView(R.layout.activity_main);
-        View root = findViewById(R.id.main);
-        root.setOnApplyWindowInsetsListener((view, insets) -> {
-            if (android.os.Build.VERSION.SDK_INT >= 30) {
-                android.graphics.Insets bars = insets.getInsets(
-                        WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout());
-                view.setPadding(bars.left, bars.top, bars.right, bars.bottom);
-            } else {
-                view.setPadding(insets.getSystemWindowInsetLeft(), insets.getSystemWindowInsetTop(),
-                        insets.getSystemWindowInsetRight(), insets.getSystemWindowInsetBottom());
+        WindowInsetsHelper.apply(this);
+        EditText input = findViewById(R.id.municipality_input);
+        input.setOnEditorActionListener((view, actionId, event) -> {
+            boolean enter = event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER;
+            if (enter && event.getAction() != KeyEvent.ACTION_UP) return true;
+            if (actionId == EditorInfo.IME_ACTION_GO || actionId == EditorInfo.IME_ACTION_DONE || enter) {
+                String name = processor.processMunicipality(input.getText().toString());
+                if (name == null) {
+                    input.setError(getString(input.getText().toString().trim().isEmpty()
+                            ? R.string.empty_error : R.string.invalid_error));
+                } else {
+                    input.setError(null);
+                    Intent intent = new Intent(this, Municipality.class);
+                    intent.putExtra(EXTRA_MUNICIPALITY, name);
+                    startActivity(intent);
+                }
+                return true;
             }
-            return insets;
+            return false;
         });
-        root.requestApplyInsets();
     }
 }
