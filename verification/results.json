@@ -1,0 +1,38 @@
+[
+  {
+    "input": "BEIJING",
+    "city": "Beijing",
+    "detail": "PASS",
+    "website_intent": "english.beijing.gov.cn"
+  },
+  {
+    "input": "shanghai",
+    "city": "Shanghai",
+    "detail": "PASS",
+    "website_intent": "english.shanghai.gov.cn"
+  },
+  {
+    "input": "Tianjin",
+    "city": "Tianjin",
+    "detail": "PASS",
+    "website_intent": "en.tj.gov.cn"
+  },
+  {
+    "input": "ChOnGqInG",
+    "city": "Chongqing",
+    "detail": "PASS",
+    "website_intent": "english.cq.gov.cn"
+  },
+  {
+    "input": "",
+    "invalid_stays_on_main": "PASS"
+  },
+  {
+    "input": "Guangzhou",
+    "invalid_stays_on_main": "PASS"
+  },
+  {
+    "input": "%s%s%s",
+    "invalid_stays_on_main": "PASS"
+  }
+]
