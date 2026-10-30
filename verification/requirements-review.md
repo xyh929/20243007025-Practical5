@@ -10,7 +10,7 @@
 - Implicit ACTION_VIEW: selected official URL and missing-handler exception handling: inspected.
 - Official homepages: direct HTTPS requests to english.beijing.gov.cn, english.shanghai.gov.cn, en.tj.gov.cn and english.cq.gov.cn all returned HTTP 200 on 2026-10-30.
 - assembleDebug and lintDebug: successful on 2026-10-30. Lint success does not mean zero warnings.
-- Runtime emulator screenshots and results: existing evidence from 2026-10-21. No emulator was connected during this review; these are not new runtime results.
+- Runtime retest on Pixel_6, 2026-10-30: all 10 input cases passed. Four city screenshots and three validation error screenshots were visually checked. ACTION_VIEW logs matched all four official hosts. Evidence is stored in verification/2026-10-30. Browser page rendering was not asserted.
 - GitHub: anonymous API confirmed public repository xyh929/20243007025-Practical5; actual development commits retained and pushed.
 
 ## Historical process requirement
