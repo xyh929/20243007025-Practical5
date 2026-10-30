@@ -25,12 +25,12 @@ Enter Beijing, Shanghai, Tianjin or Chongqing, then press the keyboard Go/Enter 
 - Visit site: each button launched an ACTION_VIEW request with the corresponding official hostname, verified in Android ActivityTaskManager logs. This checks the browser handoff; it does not assert remote page rendering or network availability.
 - Runtime invalid inputs: empty, whitespace and Guangzhou remain on the input screen.
 - Screenshots reviewed for Beijing and Chongqing; title, photo, information and fixed bottom button visible.
-- lintDebug could not complete: intellij-core-32.3.3.jar and kotlin-compiler-32.3.3.jar are missing from the local lint cache. Offline lint reports dependency resolution failure; online lint stalled during tool retrieval. APK compilation and simulator validation passed independently.
+- Rechecked on 2026-10-30: assembleDebug and lintDebug both completed successfully after downloading required dependencies. The standalone TextProcessor check again passed all 11 cases. Emulator results above are from 2026-10-21 and were not rerun on 2026-10-30.
 
 ## Submission and version control
-The public repository is named `20243007025-Practical5`. It was created blank, without a remote README, .gitignore or license. Actual local development commits were preserved and were pushed individually in their original order, without force-pushing or changing commit dates.
+The public repository is named `20243007025-Practical5`. It was created blank, without a remote README, .gitignore or license. Actual local development commits were preserved without force-pushing or changing commit dates. On 2026-10-30, the remote main branch was absent; all 11 existing commits were uploaded together, and anonymous GitHub API access confirmed that the repository is public.
 
-Timing disclosure: the initial Android project and app features were developed locally before the remote repository was created. Therefore the original requirement to link the remote immediately and push during development was not met at that time. Later individual pushes preserve the real development history but do not retroactively satisfy that timing requirement. The project was prepared and pushed using Git CLI rather than Android Studio built-in Git controls.
+Timing disclosure: the initial Android project and app features were developed locally before the remote repository was created. Therefore the original requirement to link the remote immediately and push during development was not met at that time. The later upload preserves the real development history but does not retroactively satisfy that timing requirement. The project was prepared and pushed using Git CLI rather than Android Studio built-in Git controls.
 
 Submit this HTTPS URL in the designated Practical 5 submission on Canvas:
 https://github.com/xyh929/20243007025-Practical5
