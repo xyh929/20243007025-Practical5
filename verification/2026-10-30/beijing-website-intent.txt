@@ -1,0 +1,5 @@
+--------- beginning of system
+10-30 10:54:16.246   696  1714 I ActivityTaskManager: START u0 {act=android.intent.action.VIEW dat=https://english.beijing.gov.cn/... xflg=0x4 cmp=com.android.chrome/com.google.android.apps.chrome.IntentDispatcher} with LAUNCH_MULTIPLE from uid 10233 (com.example.practicalfive) (sr=146834613) (BAL_ALLOW_VISIBLE_WINDOW) result code=0
+10-30 10:54:16.392   696  1648 I ActivityTaskManager: START u0 {act=android.intent.action.VIEW dat=https://english.beijing.gov.cn/... flg=0x14002000 xflg=0x4 cmp=com.android.chrome/org.chromium.chrome.browser.ChromeTabbedActivity (has extras)} with LAUNCH_SINGLE_INSTANCE_PER_TASK from uid 10176 (com.android.chrome) (sr=99147274) (BAL_ALLOW_VISIBLE_WINDOW) result code=2
+--------- beginning of main
+10-30 10:54:16.767   696   739 I ActivityTaskManager: Displayed com.android.chrome/org.chromium.chrome.browser.ChromeTabbedActivity for user 0: +498ms

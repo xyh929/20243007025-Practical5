@@ -25,7 +25,7 @@ Enter Beijing, Shanghai, Tianjin or Chongqing, then press the keyboard Go/Enter 
 - Visit site: each button launched an ACTION_VIEW request with the corresponding official hostname, verified in Android ActivityTaskManager logs. This checks the browser handoff; it does not assert remote page rendering or network availability.
 - Runtime invalid inputs: empty, whitespace and Guangzhou remain on the input screen.
 - Screenshots reviewed for Beijing and Chongqing; title, photo, information and fixed bottom button visible.
-- Rechecked on 2026-10-30: assembleDebug and lintDebug both completed successfully after downloading required dependencies. The standalone TextProcessor check again passed all 11 cases. Emulator results above are from 2026-10-21 and were not rerun on 2026-10-30.
+- Rechecked on 2026-10-30: assembleDebug and lintDebug both completed successfully after downloading required dependencies. The standalone TextProcessor check again passed all 11 cases. A fresh Pixel_6 emulator run on 2026-10-30 passed all 10 runtime cases (seven supported/case variants and three invalid inputs). Four city screenshots and all three error popups were visually reviewed. Browser handoffs were checked against ActivityTaskManager logs. Fresh evidence is in verification/2026-10-30; the repeatable script is verification/runtime_check.py.
 
 ## Submission and version control
 The public repository is named `20243007025-Practical5`. It was created blank, without a remote README, .gitignore or license. Actual local development commits were preserved without force-pushing or changing commit dates. On 2026-10-30, the remote main branch was absent; all 11 existing commits were uploaded together, and anonymous GitHub API access confirmed that the repository is public.

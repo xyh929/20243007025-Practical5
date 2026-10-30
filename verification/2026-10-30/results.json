@@ -1,0 +1,59 @@
+[
+  {
+    "input": "Beijing",
+    "city": "Beijing",
+    "title_summary_image_button": "PASS",
+    "website_intent": "english.beijing.gov.cn"
+  },
+  {
+    "input": "beijing",
+    "city": "Beijing",
+    "title_summary_image_button": "PASS",
+    "website_intent": "english.beijing.gov.cn"
+  },
+  {
+    "input": "BEIJING",
+    "city": "Beijing",
+    "title_summary_image_button": "PASS",
+    "website_intent": "english.beijing.gov.cn"
+  },
+  {
+    "input": "Shanghai",
+    "city": "Shanghai",
+    "title_summary_image_button": "PASS",
+    "website_intent": "english.shanghai.gov.cn"
+  },
+  {
+    "input": "Tianjin",
+    "city": "Tianjin",
+    "title_summary_image_button": "PASS",
+    "website_intent": "en.tj.gov.cn"
+  },
+  {
+    "input": "Chongqing",
+    "city": "Chongqing",
+    "title_summary_image_button": "PASS",
+    "website_intent": "english.cq.gov.cn"
+  },
+  {
+    "input": "ChOnGqInG",
+    "city": "Chongqing",
+    "title_summary_image_button": "PASS",
+    "website_intent": "english.cq.gov.cn"
+  },
+  {
+    "input": "Guangzhou",
+    "expected_error_message_for_screenshot_review": "Choose Beijing, Shanghai, Tianjin or Chongqing.",
+    "stays_on_main": "PASS"
+  },
+  {
+    "input": "",
+    "expected_error_message_for_screenshot_review": "Please enter a municipality name.",
+    "stays_on_main": "PASS"
+  },
+  {
+    "input": "   ",
+    "expected_error_message_for_screenshot_review": "Please enter a municipality name.",
+    "stays_on_main": "PASS"
+  }
+]
